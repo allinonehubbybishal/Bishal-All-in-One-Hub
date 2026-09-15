@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ALL IN ONE HUB</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #050509;
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Blue + Red Studio Lights */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.45;
+    z-index: -1;
+}
+
+body::before {
+    background: #0066ff;
+    top: -150px;
+    left: -150px;
+}
+
+body::after {
+    background: #ff003c;
+    right: -150px;
+    bottom: -150px;
+}
+
+header {
+    text-align: center;
+    padding: 35px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    font-size: 42px;
+    letter-spacing: 4px;
+    text-shadow: 0 0 20px #0066ff, 0 0 30px #ff003c;
+}
+
+header p {
+    margin-top: 10px;
+    color: #ccc;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.hero h2 span {
+    color: #00aaff;
+}
+
+.hero p {
+    max-width: 750px;
+    margin: auto;
+    color: #ccc;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: 0.3s;
+    backdrop-filter: blur(10px);
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: #008cff;
+    box-shadow: 0 0 25px rgba(0,140,255,0.3);
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    color: #00aaff;
+}
+
+.card p {
+    color: #bbb;
+    line-height: 1.5;
+}
+
+.downloads {
+    margin-top: 70px;
+}
+
+.download-box {
+    background: rgba(255,255,255,0.06);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255,255,255,0.12);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.download-box span {
+    color: #ddd;
+}
+
+.download-btn {
+    background: linear-gradient(90deg, #0066ff, #ff003c);
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.download-btn:hover {
+    opacity: 0.8;
+}
+
+.contact {
+    margin-top: 70px;
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 20px;
+}
+
+.contact p {
+    margin: 12px 0;
+    color: #ccc;
+}
+
+.contact a {
+    color: #00aaff;
+    text-decoration: none;
+}
+
+.whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    padding: 15px 25px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 17px;
+    box-shadow: 0 0 20px rgba(37,211,102,0.3);
+}
+
+.whatsapp svg {
+    width: 25px;
+    height: 25px;
+    fill: white;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: 50px;
+    color: #777;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .download-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>ALL IN ONE HUB</h1>
+    <p>BISHAL'S ONLINE SERVICE HUB</p>
+</header>
+
+<section class="hero">
+    <h2>Welcome to <span>ALL IN ONE HUB</span></h2>
+
+    <p>
+        I am Bishal. I provide different kinds of online services
+        like a Cyber Cafe / Server Cafe. From online applications
+        and document work to digital services, I aim to provide
+        reliable and convenient online solutions in one place.
+    </p>
+</section>
+
+<div class="container">
+
+    <h2 class="section-title">Our Online Services</h2>
+
+    <div class="services">
+
+        <div class="card">
+            <h3>Online Applications</h3>
+            <p>Online forms, applications and registration services.</p>
+        </div>
+
+        <div class="card">
+            <h3>Document Work</h3>
+            <p>Typing, editing, printing and digital document services.</p>
+        </div>
+
+        <div class="card">
+            <h3>Cyber Cafe Services</h3>
+            <p>Various internet-based and online computer services.</p>
+        </div>
+
+        <div class="card">
+            <h3>Digital Services</h3>
+            <p>Helping customers with different kinds of online work.</p>
+        </div>
+
+    </div>
+
+
+    <section class="downloads">
+
+        <h2 class="section-title">File Downloads</h2>
+
+        <div class="download-box">
+            <span>📄 Sample File 1</span>
+
+            <!-- Replace files/sample.pdf with your actual uploaded file -->
+            <a class="download-btn"
+               href="files/sample.pdf"
+               download>
+               Download
+            </a>
+        </div>
+
+        <div class="download-box">
+            <span>📄 Sample File 2</span>
+
+            <!-- Replace files/sample2.pdf with your actual uploaded file -->
+            <a class="download-btn"
+               href="files/sample2.pdf"
+               download>
+               Download
+            </a>
+        </div>
+
+    </section>
+
+
+    <section class="contact">
+
+        <h2 class="section-title">Contact Me</h2>
+
+        <p>
+            📧 Email:
+            <a href="mailto:bishalkirttaniya007@gmail.com">
+                bishalkirttaniya007@gmail.com
+            </a>
+        </p>
+
+        <p>
+            📞 Phone:
+            <a href="tel:+918617273865">
+                +91 8617273865
+            </a>
+        </p>
+
+
+        <a class="whatsapp"
+           href="https://wa.me/918617273865?text=Hello%20Bishal%2C%20I%20want%20to%20contact%20you."
+           target="_blank"
+           rel="noopener">
+
+            <svg viewBox="0 0 24 24">
+                <path d="M12.04 2C6.55 2 2.1 6.45 2.1 11.94c0 1.75.46 3.46 1.33 4.96L2 22l5.23-1.37a9.94 9.94 0 0 0 4.81 1.23h.01c5.48 0 9.93-4.45 9.93-9.93C21.98 6.45 17.53 2 12.04 2zm0 18.14h-.01a8.23 8.23 0 0 1-4.2-1.15l-.3-.18-3.1.81.83-3.02-.2-.31a8.2 8.2 0 1 1 6.98 3.85zm4.5-6.15c-.25-.13-1.48-.73-1.71-.81-.23-.08-.4-.13-.57.13-.17.25-.65.81-.8.98-.15.17-.3.19-.55.06-.25-.13-1.04-.38-1.98-1.22-.73-.65-1.22-1.45-1.36-1.7-.14-.25-.01-.39.11-.52.11-.11.25-.3.38-.45.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.57-1.36-.78-1.86-.21-.49-.42-.43-.57-.44h-.49c-.17 0-.45.06-.68.32-.23.25-.89.87-.89 2.12s.91 2.46 1.04 2.63c.13.17 1.78 2.72 4.31 3.81.6.26 1.07.41 1.44.52.61.19 1.17.16 1.61.1.49-.07 1.48-.61 1.69-1.2.21-.59.21-1.09.15-1.2-.06-.11-.23-.17-.48-.3z"/>
+            </svg>
+
+            Contact Me on My WhatsApp
+
+        </a>
+
+    </section>
+
+</div>
+
+
+<footer>
+    © <span id="year"></span> ALL IN ONE HUB — BISHAL
+</footer>
+
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
